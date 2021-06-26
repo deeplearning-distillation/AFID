@@ -1,5 +1,4 @@
-# AFID
-Attention-based Feature Interaction for Efficient Online Knowledge Distillation 
+# Attention-based Feature Interaction for Efficient Online Knowledge Distillation 
 
 ![Framework](https://github.com/deeplearning-distillation/AFID/blob/main/images/AFID.jpg)
 
@@ -11,5 +10,9 @@ teacher and the student can send, receive, and give feedback on an equal footing
 The code has been tested using Pytorch1.5.1 and CUDA10.2 on Ubuntu 18.04.
   
 > pip install -r requirements.txt
-  
-# Standard Readme Style _(standard-readme)_
+
+# AFID
+
+You can run the following code to train models on CIFAR-100:
+
+> CUDA_VISIBLE_DEVICES=3 python train_AFID_wrn.py --lr 0.2 --depth 16 --widen_factor 2
