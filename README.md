@@ -9,4 +9,4 @@ teacher and the student can send, receive, and give feedback on an equal footing
 
 # Getting Started
 The code has been tested using Pytorch1.5.1 and CUDA10.2 on Ubuntu 18.04.
-  pip install -r requirements.txt
+    pip install -r requirements.txt
