@@ -11,3 +11,5 @@ teacher and the student can send, receive, and give feedback on an equal footing
 The code has been tested using Pytorch1.5.1 and CUDA10.2 on Ubuntu 18.04.
   
   pip install -r requirements.txt
+  
+# Standard Readme Style _(standard-readme)_
