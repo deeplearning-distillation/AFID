@@ -7,7 +7,7 @@ teacher and the student can send, receive, and give feedback on an equal footing
 
 
 # Getting Started
-The code has been tested using Pytorch1.5.1 and CUDA10.2 on Ubuntu 18.04.
+The code has been tested using Pytorch1.8.1 and CUDA11.1 on Ubuntu 18.04 (GPUs:3090 * 4). You can refer to document "requirements.txt".
   
 > pip install -r requirements.txt
 
