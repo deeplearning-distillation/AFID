@@ -129,13 +129,13 @@ def train(train_loader, model, module, criterion, criterion_kl, optimizer, optim
     inputs, labels = prefetcher.next()
     iter_index = 1
     consistency_weight = get_current_consistency_weight(epoch)
-    while inputs is not None:   # 总计一个epoch
+    while inputs is not None:   # one epoch
         inputs, labels = inputs.cuda(), labels.cuda()
 
         #####################################################################
         outputs1, outputs2, fmap = model(inputs)
-        ensemble_logit = (outputs1 + outputs2) / 2  # 双网络聚合逻辑
-        fused_logit = module(fmap[0], fmap[1])  # 融合
+        ensemble_logit = (outputs1 + outputs2) / 2 
+        fused_logit = module(fmap[0], fmap[1])  # fused_logit
 
         loss_ce = criterion(outputs1, labels) + criterion(outputs2, labels) + criterion(fused_logit, labels)
         loss_kl = consistency_weight * (
