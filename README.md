@@ -17,6 +17,6 @@ You can run the following code to train models on CIFAR-100:
 
 > CUDA_VISIBLE_DEVICES=0 python train_AFID_wrn.py --lr 0.2 --depth 16 --widen_factor 2
 
-You can run the following code to train models on ImageNet 2012:
+You can run the following code to train models on ImageNet 2012 and modify parameters with the file named "config.json"(ONLY imagenet):
 
-> train_AFID_imagenet_distribute.py
+> python train_AFID_imagenet_distribute.py
