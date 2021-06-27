@@ -1,0 +1,28 @@
+{
+	"GPU" : "0,1,2,3",
+    "num_classes" : 1000,
+    "network" : "resnet34",
+    "seed" : 0,
+    "num_workers" : 8,
+    "image_size" : 224,
+    "train" : {
+        "dataset_train_path" : "./data/imagenet/train",
+        "checkpoint_path" : "./checkpoints",
+        "resume" : "./checkpoints/latest.pth",
+        "log" : "./log",
+        "epochs" : 100,
+        "batch_size" : 256,
+        "accumulation_steps" : 1,
+        "learning_rate" : 0.1,
+        "milestones" : [30, 60, 90],
+        "weight_decay" : 1e-4,
+        "momentum" : 0.9,
+        "print_interval" : 100,
+        "apex" : false
+    },
+
+    "val" : {
+        "dataset_val_path": "./data/imagenet/val",
+        "batch_size" : 256
+    }
+}
